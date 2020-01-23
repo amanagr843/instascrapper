@@ -67,7 +67,10 @@ class Instalogin():
         # print(requests.get(results["owner.profile_pic_url"][0]))
         # with open("profilepic/profile_pic.jpeg","wb") as f1:
         #     f1.write(r1.content)
-
-bot=Instalogin("amanagrwa1804","Cheena@18")
+name = input("Enter your username")
+password = input("Enter your password")
+import getpass 
+password = getpass.getpass(prompt='Enter your password:') 
+bot=Instalogin(name,password)
 user = input("Enter the target username")
 bot.signin(user)
